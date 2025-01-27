@@ -2,15 +2,17 @@
   hosts: frontend
   become: yes
   tasks:
-   - name: install nginx server
-     ansible.builtin.package:
+    - name: install nginx server
+      ansible.builtin.package:
         name: install nginx
         state: present
+
     - name: start nginx server
       ansible.builtin.service:
         name: run nginx
         state: started
         enabled: yes
+
     - name: remove html directory
       ansible.builtin.file:
         path: /usr/share/nginx/html  
