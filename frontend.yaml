@@ -9,9 +9,9 @@
 
     - name: start nginx server
       ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: yes
+        name: nginx
+        state: started
+        enabled: yes
 
     - name: remove html directory
       ansible.builtin.file:
